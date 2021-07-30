@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMX Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+    <header>
+        <a href="/impressum/">Impressum</a>
+    </header>
+    <div class="center">
+        <div class="box">
+            <div id="data">
+                {{ cookie | safe }}
+            </div>
+            <div>
+                <button hx-get="/click/" hx-target="#data" hx-swap="innerHTML">Click Me</button>
+                <button hx-get="/clear/" hx-target="#data" hx-swap="innerHTML">Clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
