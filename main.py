@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request, render_template, make_response, redirect
 
-app = Flask(__name__)
+app=Flask(__name__)
 app.config["SECRET_KEY"] = "ebl9am0t8he)h262kvi+1lrwm4*!4&41mu$gqwqcvz0xt5@g_p"
 
 def create_resp_text(val:int) -> str:
