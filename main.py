@@ -12,7 +12,7 @@ def index():
     cookie = request.cookies.get("count")
     if cookie:
         return render_template("test.html", cookie=create_resp_text(cookie))
-    return render_template("test.html", cookie="<p>0</p>")
+    return render_template("test.html", cookie=create_resp_text(0))
 
 @app.route('/click/')
 def clicked():
