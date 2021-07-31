@@ -4,8 +4,8 @@
     --body-color:#0C9476;
     --text:#42FFD6;
     --darker-text:#24E0B6;
-    --dark-orange:#942600;
-    --light-orange:#E05424;
+    --dark-sec:#24BDE3;
+    --light-sec:#42D9FF;
 }
 body{
     background-color: var(--body-color);
@@ -14,6 +14,7 @@ body{
 
     height:100%;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 p{
     font-size: 30px;
@@ -21,11 +22,12 @@ p{
 }
 a{
     text-decoration: none;
-    color:var(--light-orange);
+    color:var(--light-sec);
     font-weight: bold;
+    margin: 1%;
 }
 a:hover, a:focus{
-    color:var(--dark-orange);
+    color:var(--dark-sec);
 }
 header{
     width: 100%;
@@ -49,8 +51,8 @@ button{
     cursor: pointer;
 }
 button:hover, button:focus{
-    color:var(--light-orange);
-    border: 2px solid var(--dark-orange);
+    color:var(--light-sec);
+    border: 2px solid var(--dark-sec);
 }
 .center{
     position:absolute;

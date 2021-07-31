@@ -7,6 +7,8 @@ app.config["SECRET_KEY"] = "ebl9am0t8he)h262kvi+1lrwm4*!4&41mu$gqwqcvz0xt5@g_p"
 def create_resp_text(val:int) -> str:
     return f"<p class=\"num\">{val}</p>"
 
+
+#Index logic
 @app.route('/')
 def index():
     cookie = request.cookies.get("count")
@@ -14,8 +16,8 @@ def index():
         return render_template("test.html", cookie=create_resp_text(cookie))
     return render_template("test.html", cookie=create_resp_text(0))
 
-@app.route('/click/')
-def clicked():
+@app.route('/index_click/')
+def index_clicked():
     cookie = request.cookies.get("count")
     if cookie:
         cookie = int(cookie)
@@ -27,8 +29,8 @@ def clicked():
         resp.set_cookie("count", "1".encode(), samesite='Lax')
     return resp
 
-@app.route('/clear/')
-def clear():
+@app.route('/index_clear/')
+def index_clear():
     resp = make_response(create_resp_text(0), 200)
     resp.set_cookie("count", str(0).encode(), samesite='Lax')
     return resp
