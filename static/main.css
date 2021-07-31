@@ -50,7 +50,7 @@ button{
 
     cursor: pointer;
 }
-button:hover, button:focus{
+button:hover{
     color:var(--light-sec);
     border: 2px solid var(--dark-sec);
 }
